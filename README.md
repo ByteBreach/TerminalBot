@@ -23,6 +23,29 @@ pip install terminalbot
 
 ## Usage Examples
 
+### Using TerminalBot from the Command Line
+### Receive a message
+
+```bash
+message=$(terminalbot --token "token" --id "@username")
+echo "message is : $message"
+```
+- Replace <token> with your bot token and <username> with your group chat ID.
+
+#### Receive and automatically send a response
+```bash
+message=$(terminalbot --token "token" --id "@username" --message-receive "Your message received")
+echo "message is: $message"
+```
+- This command will automatically send the specified response message after receiving a message.
+
+#### Send a message
+```bash
+terminalbot --token "token" --id "@username" --message "Hello world"
+echo "Your message sent to the Telegram group"
+```
+- This command will automatically send the specified message to the Telegram group.
+
 ### 1. Receiving Messages
 
 ```python
